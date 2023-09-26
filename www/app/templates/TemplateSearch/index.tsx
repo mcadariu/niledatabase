@@ -1,9 +1,9 @@
-"use client";
-import Image from "next/image";
-import { useMemo, useState } from "react";
-import { Template } from "../types";
-import TemplateCard from "./TemplateCard";
-import GradientButton from "@/app/_components/common/GradientButton";
+'use client';
+import Image from 'next/image';
+import { useMemo, useState } from 'react';
+import { Template } from '../types';
+import TemplateCard from './TemplateCard';
+import GradientButton from '@/app/_components/common/GradientButton';
 
 const Empty = () => {
   return <div>No templates match your criteria.</div>;
@@ -17,7 +17,7 @@ export default function TemplateSearch({
   searchEnabled?: boolean;
   showButton?: boolean;
 }) {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
 
   const filtered = useMemo(() => {
     if (!searchText) {
@@ -27,7 +27,7 @@ export default function TemplateSearch({
       const keys = Object.keys(template);
       const anyMatches = keys
         .map((key) => {
-          if (key === "metadata") {
+          if (key === 'metadata') {
             for (const mKey of Object.keys(template.metadata)) {
               if (template[key][mKey].includes(searchText)) {
                 return true;
@@ -61,7 +61,7 @@ export default function TemplateSearch({
         </div>
       )}
       {showButton && (
-        <div className="self-end block">
+        <div className="self-end">
           <GradientButton href="/templates" variant="soft">
             <Image
               src="/icons/plus.svg"
