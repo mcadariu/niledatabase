@@ -93,7 +93,7 @@ export const JavaQuickstart: Template = {
   description: "Learn about Nile concepts from a Todo app in Java",
   // who made it
   author: "Nile",
-  demoUrl: "",
+  demoUrl: "https://todo-java.fly.dev",
   // the location of the thumbnail. could be in /public/templates, or a CDN
   imageSrc: "/templates/nad.jpg",
   // the readmeURL should be publically accessible.
